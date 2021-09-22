@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World</title>
+    <title>Bitop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -12,9 +12,9 @@
     <!-- 引入 React -->
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- 引入 chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
 
-    <!-- 引入 Babel -->
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   </head>
   <body>
     <!-- Navigation menu start -->
@@ -94,7 +94,7 @@
         <button class="w3-bar-item w3-button" onclick="openStock('stock-tab3')">跌幅榜</button>
         <button class="w3-bar-item w3-button" onclick="openStock('stock-tab4')">24h成交榜</button>
       </div>
-      <div id="stock-tab1" class="w3-display-container city stock">
+      <div id="stock-tab1" class="w3-display-container stockTab stock">
         <table class="table">
           <thead>
             <tr class="table_tr">
@@ -110,19 +110,19 @@
           </tbody>
         </table> 
       </div>
-      <div id="stock-tab2" class="w3-container w3-display-container city" style="display:none">
+      <div id="stock-tab2" class="w3-container w3-display-container stockTab" style="display:none">
         <span onclick="this.parentElement.style.display='none'"
         class="w3-button w3-large w3-display-topright">&times;</span>
         <h2>最新价格</h2>
         <p>最新价格描述</p> 
       </div>
-      <div id="stock-tab3" class="w3-container w3-display-container city" style="display:none">
+      <div id="stock-tab3" class="w3-container w3-display-container stockTab" style="display:none">
         <span onclick="this.parentElement.style.display='none'"
         class="w3-button w3-large w3-display-topright">&times;</span>
         <h2>跌幅榜</h2>
         <p>跌幅榜描述</p>
       </div>
-      <div id="stock-tab4" class="w3-container w3-display-container city" style="display:none">
+      <div id="stock-tab4" class="w3-container w3-display-container stockTab" style="display:none">
         <span onclick="this.parentElement.style.display='none'"
         class="w3-button w3-large w3-display-topright">&times;</span>
         <h2>24h成交榜</h2>
@@ -252,7 +252,7 @@
     <div class="advertise-content">
       <div class="col-sm-7 col-lg-7">
         <div class="advertise-1">
-          <img src="images/Images-PC+Mobile.png" alt="Images-PC+Mobile">
+          <img src="images/Images-PC-Mobile.png" alt="Images-PC+Mobile">
         </div>
       </div>
       <div class="col-sm-5 col-lg-5">
@@ -348,12 +348,6 @@
   </div>
   <!-- Footer end -->
 
-    <script type="text/babel">
-      <!--ReactDOM.render(
-        <h1>Hello, world!</h1>,
-        document.getElementById('root')
-      ); -->
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>

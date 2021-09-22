@@ -112,6 +112,9 @@ body {
   display: inline-block;
   margin: 32px 0 32px 16px;
 }
+.ad-style img {
+  cursor: pointer;
+}
 /* stock bar */
 .stock-bar {
   color: #ffffff;
@@ -178,6 +181,7 @@ body {
   background: #717a86;
   border-radius: 6px;
   font-size: 14px;
+  border: none;
 }
 .stock-button:hover {
   background: #ffd140;
@@ -188,7 +192,7 @@ body {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0), #ffd140);
 }
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
-  padding: 19px 0 16px 0;
+  padding: 7px 0 4px 0;
   vertical-align: initial;
   border-top: 1px solid #1d1f26;
   text-align: center;
@@ -221,21 +225,16 @@ body {
   color: #f84960!important;
 }
 .seeMore {
-  width: 1200px;
+  width: 1920px;
   color: #777E90;
   text-align: center;
   margin: 24px auto;
-}
-@media (min-width: 768px)
-.navbar-nav>li>a {
-    padding-top: 13px;
-    padding-bottom: 15px;
 }
 
 /* Select Us */
 .selectUs {
   width: 1919px;
-  height: 580px;
+  min-height: 580px;
   opacity: 1;
   background: #ffd140;
   margin: 0 auto;
@@ -260,9 +259,6 @@ body {
 .security {
   width: 304px;
   height: 208px;
-  opacity: 1;
-  background: #ffd140;
-  border-radius: 10px;
   padding: 19px 24px 22px 25px;
 }
 .security-title {
@@ -526,4 +522,25 @@ body {
 .footer-col-3 {
   height: 52px;
   padding: 16px 0;
+}
+
+@media (min-width: 768px){
+  .navbar-nav>li>a {
+    padding-top: 13px;
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 768px){
+  .certificate {
+    height: auto;
+  }
+  .certificate-content div:nth-child(2) {
+    left: auto;
+  }
+}
+
+.lineChart {
+  width: 94px!important;
+  height: 37px!important;
+  display: inline!important;
 }

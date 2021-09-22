@@ -1,10 +1,10 @@
-function openStock(cityName) {
+function openStock(stockName) {
   var i;
-  var x = document.getElementsByClassName("city");
+  var x = document.getElementsByClassName("stockTab");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
-  document.getElementById(cityName).style.display = "block";  
+  document.getElementById(stockName).style.display = "block";  
 }
 
 /* stock list */
@@ -38,8 +38,7 @@ function displayPlayerList(stocks) {
             <span class="upPrice">${stock.reb}</span>
           </td>
           <td>
-            <span class="stock-line">${stock.ast}</span>
-
+            <canvas class="lineChart" width="94px" height="47px"></canvas>
           </td>
           <td>
             <button class="stock-button" onclick="buyStock()">交易</button>
@@ -51,3 +50,24 @@ function displayPlayerList(stocks) {
 }
 
 displayPlayerList(stocks);
+
+/* line Chart */
+let ctx = document.getElementsByClassName('lineChart');
+let chart = new Chart(ctx, {
+  // The type of chart we want to create
+  type: 'line',
+
+  // The data for our dataset
+  data: {
+    labels: ['', '', '', '', '', '', ''],
+    datasets: [{
+      label: '',
+      data: [0, 30, 45, 28, 60, 90, 115],
+      fill: {
+        target: 'origin',
+        above: '#ffd140',   // Area will be red above the origin
+        below: '#ffd140'    // And blue below the origin
+      }
+    }]
+  },
+});
